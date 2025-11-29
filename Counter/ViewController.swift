@@ -9,14 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     var counter: Int = 0
-
+    @IBOutlet weak var counterLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        counterLabel.text = "0"
     }
     @IBAction func increaseUIButton(_ sender: Any) {
         counter+=1
-        print(counter)
+        counterLabel.text = "\(counter)"
     }
     
 
